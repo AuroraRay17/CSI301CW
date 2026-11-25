@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/page_background" android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp"
+            android:paddingTop="12dp" android:paddingBottom="12dp">
+
+            <Button android:id="@+id/focusBackButton" style="@style/Widget.Team18.Button.Text"
+                android:layout_width="wrap_content" android:layout_height="48dp"
+                android:layout_gravity="start" android:text="@string/pet_back_home"
+                android:textColor="@color/ui_accent" android:textSize="18sp" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:gravity="center" android:text="@string/pet_open_timer"
+                android:textColor="@color/ink" android:fontFamily="@font/zcool_kuaile" android:textSize="30sp" android:textStyle="bold" />
+
+            <RadioGroup android:id="@+id/focusModeOptions"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="14dp" android:orientation="horizontal"
+                android:background="@drawable/bg_pet_panel" android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+                <RadioButton android:id="@+id/countdownOption"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:minHeight="48dp"
+                    android:text="@string/focus_countdown" android:textColor="@color/ink"
+                    app:buttonTint="@color/timer_option_tint" />
+                <RadioButton android:id="@+id/countUpOption"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:minHeight="48dp"
+                    android:text="@string/focus_count_up" android:textColor="@color/ink"
+                    app:buttonTint="@color/timer_option_tint" />
+            </RadioGroup>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:background="@drawable/bg_pet_panel"
+                android:orientation="vertical" android:paddingStart="8dp" android:paddingEnd="8dp"
+                android:paddingTop="15dp" android:paddingBottom="10dp">
+
+                <LinearLayout android:id="@+id/countdownDials"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:orientation="horizontal" android:layoutDirection="ltr">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="@string/timer_focus_duration" android:textColor="@color/tomato_dark"
+                            android:textSize="16sp" android:textStyle="bold" />
+                        <com.example.team18.TimerDialView android:id="@+id/focusDial"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+
+                    <Space android:layout_width="8dp" android:layout_height="1dp" />
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="@string/timer_rest_duration" android:textColor="@color/rest_active"
+                            android:textSize="16sp" android:textStyle="bold" />
+                        <com.example.team18.TimerDialView android:id="@+id/restDial"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout android:id="@+id/cyclePanel"
+                    android:layout_width="match_parent" android:layout_height="80dp">
+                    <LinearLayout android:id="@+id/cycleSetup"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_gravity="center" android:gravity="center" android:orientation="horizontal">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp" android:text="@string/focus_round_count"
+                            android:textColor="@color/ui_accent" android:textSize="15sp"
+                            android:textStyle="bold" />
+                        <com.example.team18.NumberStepperView android:id="@+id/cycleCountPicker"
+                            android:layout_width="52dp" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/cycleProgress"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_gravity="center" android:gravity="center"
+                        android:textColor="@color/ui_accent" android:textSize="15sp"
+                        android:textStyle="bold" android:visibility="gone" />
+                </FrameLayout>
+
+                <com.example.team18.TimerDialView android:id="@+id/elapsedDial"
+                    android:layout_width="216dp" android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" android:visibility="gone" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:gravity="center" android:orientation="horizontal">
+                    <Button android:id="@+id/startPauseButton" android:layout_width="0dp"
+                        android:layout_height="56dp" android:layout_weight="1"
+                        android:backgroundTint="@color/tomato_dark" android:text="开始专注"
+                        android:textAllCaps="false" android:textColor="@android:color/white"
+                        android:textSize="16sp" android:textStyle="bold" />
+                    <Button android:id="@+id/endButton"
+                        android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1"
+                        android:layout_marginStart="8dp" android:backgroundTint="@color/tomato_dark"
+                        android:text="@string/focus_end_title" android:textAllCaps="false"
+                        android:textColor="@android:color/white" android:textSize="16sp"
+                        android:textStyle="bold" android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/tasksEntry" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="64dp" android:layout_marginTop="14dp"
+                android:background="@drawable/bg_surface_card" android:clickable="true" android:focusable="true"
+                android:gravity="center_vertical" android:orientation="horizontal"
+                android:paddingStart="14dp" android:paddingEnd="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/taskCaption" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="当前任务"
+                        android:textColor="@color/muted_text" android:textSize="12sp" />
+                    <TextView android:id="@+id/selectedTask" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:ellipsize="end" android:maxLines="1"
+                        android:textColor="@color/ink" android:textSize="16sp" android:textStyle="bold" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="任务清单  ›" android:textColor="@color/ui_accent" />
+            </LinearLayout>
+
+            <TextView android:id="@+id/contextHint" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textColor="@color/muted_text"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:id="@+id/focusBottomMenu"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp" android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_pet_panel" android:elevation="4dp"
+        android:gravity="center" android:orientation="horizontal"
+        android:paddingStart="12dp" android:paddingEnd="12dp">
+        <Button android:id="@+id/reviewEntry" style="@style/Widget.Team18.Button.Dock"
+            android:drawableTop="@drawable/ic_dock_review" android:text="@string/pet_review_entry" />
+        <Button android:id="@+id/settingsButton" style="@style/Widget.Team18.Button.Dock"
+            android:drawableTop="@drawable/ic_dock_settings" android:text="@string/pet_settings_entry" />
+    </LinearLayout>
+</LinearLayout>

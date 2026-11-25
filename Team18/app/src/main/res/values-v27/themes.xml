@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.Team18" parent="Base.Theme.Team18">
+        <item name="android:navigationBarColor">@color/page_background</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

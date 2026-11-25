@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="page_background">#F3F7FF</color>
+    <color name="focus_card">#F0F2FF</color>
+    <color name="mode_pill">#E5EDFF</color>
+    <color name="soft_button">#EEE8FF</color>
+    <color name="tomato">#EC6581</color>
+    <color name="tomato_dark">#B93658</color>
+    <color name="ink">#202D49</color>
+    <color name="muted_text">#53637F</color>
+    <color name="ring_track">#F4ABB8</color>
+    <color name="timer_rest_track">#88D9BD</color>
+    <color name="timer_disabled">#A5AFC1</color>
+    <color name="mint">#36AF89</color>
+    <color name="rest_active">#1B775E</color>
+    <color name="ui_accent">#365DCB</color>
+    <color name="ui_secondary">#6B4DC0</color>
+    <color name="ui_outline">#8C9BBD</color>
+    <color name="surface_border">#DFE8FD</color>
+    <color name="surface_tint">#EAF2FF</color>
+    <color name="shop_mint">#D8F6E6</color>
+    <color name="shop_mint_ink">#22684C</color>
+    <color name="shop_inactive">#F3F5FB</color>
+    <color name="shop_equipped">#CFE3FF</color>
+    <color name="shop_equipped_border">#82B2F3</color>
+</resources>

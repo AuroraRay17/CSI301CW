@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/page_background" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="22dp">
+        <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/backButton"
+            android:layout_width="wrap_content" android:layout_height="48dp"
+            android:text="‹  返回任务" />
+        <TextView android:id="@+id/detailTitle" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="26dp"
+            android:textColor="@color/ink" android:fontFamily="@font/zcool_kuaile" android:textSize="28sp" android:textStyle="bold" />
+        <TextView android:id="@+id/detailProgress" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:textColor="@color/tomato_dark" android:textSize="16sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="26dp" android:background="@drawable/bg_surface_card"
+            android:orientation="vertical" android:padding="20dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="目标番茄数" android:textColor="@color/ink" android:textSize="17sp" android:textStyle="bold" />
+            <EditText android:id="@+id/goalInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="number" android:maxLength="2"
+                android:hint="例如 4" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="22dp" android:text="任务备注" android:textColor="@color/ink"
+                android:textSize="17sp" android:textStyle="bold" />
+            <EditText android:id="@+id/noteInput" android:layout_width="match_parent"
+                android:layout_height="110dp" android:gravity="top" android:hint="写下这件事要怎么完成"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+        <Button android:id="@+id/saveDetailButton" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="24dp"
+            android:text="保存任务目标"
+            android:textAllCaps="false" android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

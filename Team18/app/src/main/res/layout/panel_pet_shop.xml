@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.team18.PetShopPanel xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_gravity="bottom" android:orientation="vertical"
+    android:background="@drawable/bg_shop_panel" android:elevation="6dp"
+    android:paddingTop="5dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:minHeight="48dp" android:orientation="horizontal"
+        android:gravity="center_vertical" android:paddingStart="12dp" android:paddingEnd="8dp">
+        <Button android:id="@+id/shopActionTab" style="@style/Widget.Team18.Button.Text"
+            android:layout_width="wrap_content" android:layout_height="48dp" android:minWidth="0dp"
+            android:paddingStart="12dp" android:paddingEnd="12dp"
+            app:backgroundTint="@color/shop_tab_background" android:text="@string/pet_shop_actions" />
+        <Button android:id="@+id/shopRoomTab" style="@style/Widget.Team18.Button.Text"
+            android:layout_width="wrap_content" android:layout_height="48dp" android:minWidth="0dp"
+            android:layout_marginStart="3dp" android:paddingStart="12dp" android:paddingEnd="12dp"
+            app:backgroundTint="@color/shop_tab_background" android:text="@string/pet_shop_room" />
+        <TextView android:id="@+id/petShopBalance"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_marginStart="8dp" android:gravity="end" android:textColor="@color/ui_secondary"
+            android:textSize="14sp" android:textStyle="bold" />
+        <ImageButton android:id="@+id/shopCloseButton"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/pet_shop_close" android:src="@drawable/ic_shop_close" />
+    </LinearLayout>
+
+    <ScrollView android:id="@+id/shopScroll"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:clipToPadding="false" android:paddingTop="5dp" android:paddingBottom="12dp">
+        <LinearLayout android:id="@+id/shopGrid"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:orientation="vertical">
+            <LinearLayout android:id="@+id/shopActionItems"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" />
+            <LinearLayout android:id="@+id/shopRoomItems"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</com.example.team18.PetShopPanel>

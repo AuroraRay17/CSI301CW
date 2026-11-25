@@ -1,0 +1,11 @@
+<resources>
+    <string name="dev_code_title">输入调试口令</string>
+    <string name="dev_code_hint">调试口令</string>
+    <string name="dev_code_error">口令不正确</string>
+    <string name="dev_panel_title">开发者调试</string>
+    <string name="dev_panel_close">关闭</string>
+    <string name="dev_coin_amount">金币数量</string>
+    <string name="dev_grant_coins">获取金币</string>
+    <string name="dev_coin_error">请输入 1 到 2147483647 之间的整数</string>
+    <string name="dev_coin_save_error">金币发放失败，请重试</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:paddingLeft="24dp" android:paddingRight="24dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="专注时长（分钟）" android:textSize="14sp" />
+    <EditText android:id="@+id/focusMinutes" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:inputType="number" android:maxLines="1" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="14dp" android:text="休息时长（分钟）" android:textSize="14sp" />
+    <EditText android:id="@+id/breakMinutes" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:inputType="number" android:maxLines="1" />
+</LinearLayout>

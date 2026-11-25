@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/page_background" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingLeft="20dp" android:paddingTop="20dp"
+        android:paddingRight="20dp" android:paddingBottom="32dp">
+        <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/backButton"
+            android:layout_width="wrap_content" android:layout_height="48dp"
+            android:text="‹  返回专注" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="23dp" android:text="任务清单"
+            android:textColor="@color/ink" android:fontFamily="@font/zcool_kuaile" android:textSize="29sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:text="先决定做什么，再专心去做。"
+            android:textColor="@color/muted_text" android:textSize="14sp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:background="@drawable/bg_focus_card"
+            android:orientation="vertical" android:padding="18dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="今天要做什么？" android:textColor="@color/ink"
+                android:textSize="17sp" android:textStyle="bold" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <EditText android:id="@+id/taskInput" android:layout_width="0dp"
+                    android:layout_height="48dp" android:layout_weight="1"
+                    android:background="@drawable/bg_input" android:hint="例如：复习 CSI301"
+                    android:inputType="textCapSentences" android:maxLines="1"
+                    android:paddingLeft="14dp" android:paddingRight="10dp"
+                    android:textColor="@color/ink" android:textSize="14sp" />
+                <Button android:id="@+id/addTaskButton" android:layout_width="88dp"
+                    android:layout_height="48dp" android:layout_marginLeft="8dp"
+                    android:singleLine="true"
+                    android:text="添加" android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="我的任务"
+                android:textColor="@color/ink" android:textSize="21sp" android:textStyle="bold" />
+            <TextView android:id="@+id/taskCount" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="0 个待办"
+                android:textColor="@color/muted_text" android:textSize="13sp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:background="@drawable/bg_surface_card"
+            android:orientation="vertical" android:paddingLeft="15dp" android:paddingTop="12dp"
+            android:paddingRight="15dp" android:paddingBottom="15dp">
+            <TextView android:id="@+id/emptyTask" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:paddingTop="24dp"
+                android:paddingBottom="24dp" android:text="还没有任务，写下今天的第一件小事吧。"
+                android:textColor="@color/muted_text" android:textSize="14sp" />
+            <ListView android:id="@+id/taskList" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:divider="@color/page_background"
+                android:dividerHeight="1dp" android:nestedScrollingEnabled="false"
+                android:scrollbars="none" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" android:text="点击选中任务 · 长按查看目标、编辑或完成"
+                android:textColor="@color/muted_text" android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

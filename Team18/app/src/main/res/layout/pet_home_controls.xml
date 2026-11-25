@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageButton android:id="@+id/petHeadTouch"
+        android:layout_width="48dp" android:layout_height="48dp"
+        android:layout_gravity="top" android:background="@android:color/transparent"
+        android:contentDescription="@string/pet_pat_locked" />
+
+    <ImageButton android:id="@+id/petGreetBubble"
+        android:layout_width="48dp" android:layout_height="48dp"
+        android:layout_gravity="top" android:background="@drawable/bg_pet_greet_bubble"
+        android:contentDescription="@string/pet_greet" android:elevation="3dp"
+        android:scaleType="center" android:src="@drawable/ic_pet_wave" android:visibility="gone" />
+
+    <Button android:id="@+id/petGrowthButton" style="@style/Widget.Team18.Button.Scene"
+        android:layout_width="wrap_content" android:layout_height="48dp"
+        android:layout_gravity="top|end" android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp" android:text="@string/pet_growth" />
+
+    <LinearLayout android:id="@+id/petHomeControls"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button android:id="@+id/petNameButton" style="@style/Widget.Team18.Button.Scene"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            android:ellipsize="end" android:maxLines="1" android:minHeight="48dp"
+            android:textSize="18sp" />
+
+        <LinearLayout android:id="@+id/petBottomMenu"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginStart="12dp" android:layout_marginEnd="12dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_pet_panel" android:elevation="4dp"
+            android:orientation="vertical" android:paddingStart="12dp" android:paddingEnd="12dp"
+            android:paddingTop="10dp" android:paddingBottom="5dp">
+
+            <TextView android:id="@+id/petTimerDetails"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingStart="4dp" android:paddingEnd="4dp"
+                android:maxLines="2" android:ellipsize="end"
+                android:textColor="@color/muted_text" android:textSize="14sp" />
+
+            <Button android:id="@+id/petTimerButton"
+                android:layout_width="match_parent" android:layout_height="54dp"
+                android:layout_marginTop="2dp" android:text="@string/pet_open_timer"
+                android:textSize="19sp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center" android:orientation="horizontal">
+                <Button android:id="@+id/petTasksButton" style="@style/Widget.Team18.Button.Dock"
+                    android:drawableTop="@drawable/ic_dock_tasks" android:text="@string/pet_task_entry" />
+                <Button android:id="@+id/petShopButton" style="@style/Widget.Team18.Button.Dock"
+                    android:drawableTop="@drawable/ic_dock_shop" android:text="@string/pet_shop_entry" />
+                <Button android:id="@+id/petReviewButton" style="@style/Widget.Team18.Button.Dock"
+                    android:drawableTop="@drawable/ic_dock_review" android:text="@string/pet_review_entry" />
+                <Button android:id="@+id/petSettingsButton" style="@style/Widget.Team18.Button.Dock"
+                    android:drawableTop="@drawable/ic_dock_settings" android:text="@string/pet_settings_entry" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

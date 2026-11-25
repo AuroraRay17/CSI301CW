@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/page_background" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingLeft="20dp" android:paddingTop="20dp"
+        android:paddingRight="20dp" android:paddingBottom="32dp">
+        <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/backButton"
+            android:layout_width="wrap_content" android:layout_height="48dp"
+            android:text="‹  返回专注" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="23dp" android:text="专注回顾"
+            android:textColor="@color/ink" android:fontFamily="@font/zcool_kuaile" android:textSize="29sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:text="看看这些小小的进步。"
+            android:textColor="@color/muted_text" android:textSize="14sp" />
+        <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/shareButton"
+            android:layout_width="wrap_content" android:layout_height="48dp"
+            android:layout_marginTop="12dp" android:text="分享文字周报 ↗" />
+        <TextView android:id="@+id/loadingText" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="18dp"
+            android:text="正在整理最近七天的记录…" android:textColor="@color/muted_text"
+            android:textSize="13sp" />
+
+        <TextView android:id="@+id/lifetimeDuration" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="18dp"
+            android:background="@drawable/bg_pet_scene" android:padding="16dp"
+            android:textColor="@color/ui_accent" android:textSize="19sp"
+            android:textStyle="bold" android:visibility="gone" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:background="@drawable/bg_focus_card"
+                android:orientation="vertical" android:padding="17dp">
+                <TextView android:id="@+id/todayMinutes" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="0"
+                    android:textColor="@color/ink" android:textSize="28sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="今日专注分钟" android:textColor="@color/muted_text" android:textSize="12sp" />
+            </LinearLayout>
+            <Space android:layout_width="12dp" android:layout_height="1dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:background="@drawable/bg_surface_card"
+                android:orientation="vertical" android:padding="17dp">
+                <TextView android:id="@+id/todaySessions" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="0"
+                    android:textColor="@color/ink" android:textSize="28sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="今日完成轮次" android:textColor="@color/muted_text" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/streakText" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:background="@drawable/bg_focus_card" android:padding="16dp"
+            android:text="连续专注 0 天" android:textColor="@color/ink" android:textSize="15sp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="26dp" android:text="最近七天"
+            android:textColor="@color/ink" android:textSize="21sp" android:textStyle="bold" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:background="@drawable/bg_surface_card"
+            android:orientation="vertical" android:padding="17dp">
+            <TextView android:id="@+id/weekSummary" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="0 分钟 · 0 轮"
+                android:textColor="@color/ink" android:textSize="16sp" android:textStyle="bold" />
+            <com.example.team18.WeekChartView android:id="@+id/weekChart"
+                android:layout_width="match_parent" android:layout_height="190dp"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="26dp" android:text="最近记录"
+            android:textColor="@color/ink" android:textSize="21sp" android:textStyle="bold" />
+        <TextView android:id="@+id/recentList" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp"
+            android:background="@drawable/bg_surface_card" android:padding="18dp"
+            android:text="完成一轮专注后，记录会出现在这里。"
+            android:textColor="@color/muted_text" android:textSize="14sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="26dp" android:text="任务时间分布"
+            android:textColor="@color/ink" android:textSize="21sp" android:textStyle="bold" />
+        <TextView android:id="@+id/taskBreakdown" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp"
+            android:background="@drawable/bg_surface_card" android:padding="18dp"
+            android:textColor="@color/muted_text" android:textSize="14sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="26dp" android:text="全部专注历史"
+            android:textColor="@color/ink" android:textSize="21sp" android:textStyle="bold" />
+        <TextView android:id="@+id/historyList" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp"
+            android:background="@drawable/bg_surface_card" android:padding="18dp"
+            android:text="还没有专注记录。" android:textColor="@color/ink" android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>
